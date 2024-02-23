@@ -2,5 +2,5 @@
 
 span {
     filter: invert(100%);
-    background: inherit;
+    color: initial;
 }

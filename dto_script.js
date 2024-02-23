@@ -7,7 +7,7 @@ function makeTable(option) {
         for (let i = 0; i < optionArray.length; i++) {
             const cell = document.createElement('td');
             cell.style.filter = 'invert(100%)'
-            cell.style.background = 'white'
+            cell.style.background = 'inherit'
             row.append(cell);
         }
 
@@ -15,6 +15,8 @@ function makeTable(option) {
     }
 
     const fontBox = document.createElement('table');
+    fontBox.style.background = 'black'
+    fontBox.style.filter = 'invert(100%)'
 
     for (let i = 0; i < 5; i++) {
         const rowOptionArray = option.arrayString.substring(i * option.columnCount, i * option.columnCount + option.columnCount);
