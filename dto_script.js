@@ -1,13 +1,15 @@
 const component = document.getElementById('test');
 
+
+
 function makeTable(option) {
     function makeRow(optionArray) {
         const row = document.createElement('tr');
         row.style.width = '1rem';
         for (let i = 0; i < optionArray.length; i++) {
             const cell = document.createElement('td');
-            cell.style.filter = 'invert(100%)'
-            cell.style.background = 'inherit'
+            cell.style.background = option.color;
+            cell.style.width = 'rem'
             row.append(cell);
         }
 
@@ -15,8 +17,7 @@ function makeTable(option) {
     }
 
     const fontBox = document.createElement('table');
-    fontBox.style.background = 'black'
-    fontBox.style.filter = 'invert(100%)'
+    fontBox.style.borderSpacing = '1px';
 
     for (let i = 0; i < 5; i++) {
         const rowOptionArray = option.arrayString.substring(i * option.columnCount, i * option.columnCount + option.columnCount);
@@ -29,7 +30,7 @@ function makeTable(option) {
 function write(element) {
     const component = typeof element === 'string' ? document.querySelector(element) : element;
 
-    component.append(makeTable({"arrayString": "100100100100100", "columnCount": 3}));
+    component.append(makeTable({"color":"red", "arrayString": "0010001000010001000100010", "columnCount": 5}));
 }
 
 
