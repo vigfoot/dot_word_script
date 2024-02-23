@@ -1,0 +1,6 @@
+@charset "UTF-8";
+
+span {
+    filter: invert(100%);
+    background: inherit;
+}
